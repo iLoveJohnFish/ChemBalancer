@@ -107,7 +107,7 @@ public final class Element {
                 if( !Character.isDigit( characterElementArray[i + 1] ) )
                     oneDigit = true; //here so it executes below in conditonal statement, also needa fix the flow
             }
-            // 
+            
             //HANDLES CASES FOR ONE LETTER ELEMENTS
             else if( Character.isUpperCase( this.characterElementArray[i] )  ){
                 newElement += characterElementArray[i];
@@ -153,9 +153,7 @@ public final class Element {
             
             //SPLITS MOLECULES                                                              this needs to be fixed (maybe)
             if( (characterElementArray[i] == '+' || characterElementArray[i] == '=') || Character.isUpperCase( characterElementArray[i + 1] ) ){
-                //CASE FOR PolyAtomics ()
-                //for(Element e : temp){ e.multiplier = newMultiplier;} //changes count of all elements in, arraylists not working for some reason
-                //DETERMINES IF THE MOLECULE IS IN THE PRODUCT OR REACTANT SIDE 
+            //DETERMINES IF THE MOLECULE IS IN THE PRODUCT OR REACTANT SIDE 
                            
                 if( isLeft )
                     this.leftElements.add( temp );
