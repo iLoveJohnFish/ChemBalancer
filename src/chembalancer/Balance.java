@@ -128,6 +128,7 @@ public class Balance {
                     columnTracker++;
                 }
                 
+                
             }
             
             //BUILDS RIGHT SIDE OF MATRIX (NEG VALUES)
