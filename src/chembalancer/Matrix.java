@@ -53,7 +53,7 @@ public final class Matrix {
      * 
      * @param m 
      */
-    public void subtract( Matrix m ){
+    public Matrix subtract( Matrix m ){
         int minRows = 0;
         int minCols = 0;
         
@@ -63,6 +63,7 @@ public final class Matrix {
             }
             
         }
+        return null;
     }
     /**
      * 
@@ -99,7 +100,7 @@ public final class Matrix {
      * 
      * @param m 
      */
-    public void multiply( Matrix m ){
+    public Matrix multiply( Matrix m ){
         if ( this.columns != m.rows ){
             throw new Error("This operation is not supported");
         }
@@ -111,10 +112,10 @@ public final class Matrix {
             }
             
         }
-        
+        return null;
     }
     
-    public void multiply( double constant ){
+    public Matrix multiply( double constant ){
         
         for (int i = 0; i < 10; i++) {
             
@@ -123,15 +124,10 @@ public final class Matrix {
             }
             
         }
-        
-        
-    }
-    
-    
-    public static Matrix multiply( double constant,  Matrix m ){
-        
         return null;
+        
     }
+    
     /**
      * 
      * 
@@ -158,24 +154,30 @@ public final class Matrix {
         
         return getDeterminant( newMatrix );
     }
-    
+    //this is probably recursive
     public Matrix getAdjugate(){
         
         return null;
     }
     
-    public double returnInverse(){
-        
-        //return  this.multiply( this.returnAdjugate , ( 1 / (this.returnDeterminant) );
-        return 0;
+    public Matrix returnInverse(){
+        return this.getAdjugate().multiply( (double)(1/this.returnDeterminant()) );
     }
     
     public double returnDeterminant(){
         return ( this.getDeterminant( this ) );
     }
+    /**
+     * method only to be used in this class for getting determinant and adj 
+     * @return 
+     */
+    private Matrix matrixOfMinors(){
+        
+        return null;
+    }
     
     public Matrix solveMatrix(){
-        return Matrix.multiply( (double)(1/this.returnDeterminant()) , this.getAdjugate()  );
+        return null;
     }
     
     @Override
