@@ -168,7 +168,7 @@ public final class Matrix {
         return ( this.getDeterminant( this ) );
     }
     /**
-     * method only to be used in this class for getting determinant and adj 
+     * method only to be used in this class for getting determinant and adj -- remember checkerboard pattern for co-factor matrix 
      * @return 
      */
     private Matrix matrixOfMinors(){
