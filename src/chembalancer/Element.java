@@ -153,8 +153,8 @@ public final class Element {
             
             //SPLITS MOLECULES                                                              this needs to be fixed (maybe)
             if( (characterElementArray[i] == '+' || characterElementArray[i] == '=') || Character.isUpperCase( characterElementArray[i + 1] ) ){
-            //DETERMINES IF THE MOLECULE IS IN THE PRODUCT OR REACTANT SIDE 
-                           
+            
+                //DETERMINES IF THE MOLECULE IS IN THE PRODUCT OR REACTANT SIDE                          
                 if( isLeft )
                     this.leftElements.add( temp );
                 

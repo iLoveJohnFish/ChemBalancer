@@ -7,7 +7,7 @@ public final class Capp  {
     
     //MAIN METHOD
     public static void main( String[] args ) {
-        Element equation = new Element( "2H2O + NaCl", "NaOH + H" ); //put any equation you'd like here
+        Element equation = new Element( "H2 + NaCl", "NaOH + H" ); //put any equation you'd like here
         equation.displayArray();
         
         Fraction faggot = new Fraction( 1.937975572 );
