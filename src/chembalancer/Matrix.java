@@ -77,7 +77,7 @@ public final class Matrix {
      * @return 
      */
     public Matrix reduceToRowEcheleon(){
-        while( !false ){
+        while( this.matrix[1][0] == 0 ){ //random expression so it doesn't throw an error
             
             for (int i = 0; i < 10; i++) {
            
@@ -95,6 +95,7 @@ public final class Matrix {
             
         }
         
+        return null;
     }
     /**
      * 
@@ -110,21 +111,19 @@ public final class Matrix {
             for (int j = 0; j < 10; j++) {
                 
             }
-            
+
         }
         return null;
     }
-    
+    //DONE
     public Matrix multiply( double constant ){
         
-        for (int i = 0; i < 10; i++) {
-            
-            for (int j = 0; j < 10; j++) {
-                
+        for (int[] matrix1 : this.matrix) {
+            for (int j = 0; j < matrix1.length; j++) {
+                matrix1[j] *= constant;
             }
-            
         }
-        return null;
+        return this;
         
     }
     
