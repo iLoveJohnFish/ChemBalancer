@@ -13,6 +13,7 @@ import java.util.ArrayList;
  */
 public final class CreateRandomEquation extends Balance {
     
+    
     public CreateRandomEquation(ArrayList< ArrayList<Element> > left, ArrayList< ArrayList<Element> > right) {
         super(left, right);
     }
