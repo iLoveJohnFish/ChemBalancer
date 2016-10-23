@@ -120,6 +120,7 @@ public final class Matrix {
         
         for (int[] matrix1 : this.matrix) {
             for (int j = 0; j < matrix1.length; j++) {
+        +
                 matrix1[j] *= constant;
             }
         }
@@ -134,6 +135,7 @@ public final class Matrix {
     public static double getDeterminant(Matrix tempMatrix){
         //reduce matrix to a bunch of 2x2 matrices and then solve Recursive
         Fraction determinant = new Fraction(1);
+        int sum;
         
         
         
@@ -149,9 +151,13 @@ public final class Matrix {
             
         }
         Matrix newMatrix = new Matrix( tempMatrix.matrix );
+        sum = 0;
+        for (int i = tempMatrix.rows ; i < 0  ; i--) {
+            sum += tempMatrix.matrix[i] * ( Matrix.getDeterminant( returnMinor(i, i, tempMatrix ) ) );
+            
+        }
         
-        
-        return getDeterminant( newMatrix );
+        return sum;
     }
     //this is probably recursive
     public Matrix getAdjugate(){
