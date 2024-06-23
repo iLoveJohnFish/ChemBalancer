@@ -17,8 +17,8 @@ public final class Capp  {
         Element equation = new Element( "H2 + NaCl", "NaOH + H" ); //put any equation you'd like here
         equation.displayArray();
         
-        Fraction faggot = new Fraction( 1.937975572 );
-        faggot.toString();
+        Fraction fidget = new Fraction( 1.937975572 );
+        fidget.toString();
 //        Element e = new Element(this.leftSide, this.rightSide);
         //Balance b = new Balance(equation.returnReactants(), equation.returnProducts());
         //b.displayMatrix();
